@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Liste des étudiants</title>
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" />
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css"  href="../static/css/style.css"
+ th:href="@{/css/style.css}"/>
+</head>
+<body>
+<header>
+
+
+		<div class="table-wrapper">
+			<div class="table-title">
+
+    <div class="container">
+
+        <div class="row">
+        
+            <div class="col-md-4">
+            <a th:href="@{Index}">
+            <span class="glyphicon glyphicon-home"> Home</span></a>
+            </div>
+
+             <div class="col-md-4">     
+             <div class="site-search">       
+               <form th:action="@{Index}" method="get">
+                <input type="text" name="motcle"  placeholder="Chercher un étudiant..."  id="searchInput" class="search" />
+                <button type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                </form></div>
+                 </div>
+             
+            <div class="col-md-4"><a  th:href="@{form}" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Ajouter
+			Etudiant </span></a>
+			</div>
+
+        </div>
+
+    </div>
+
+	</div>
+	</div>	
+</header>
+<section layout:fragment="content"></section>
+
+
+
+<footer>
+<div class="navbar-fixed-bottom">
+<small></small>
+</div>
+
+
+</footer>
+
+</body>
+</html>
